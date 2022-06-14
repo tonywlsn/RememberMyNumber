@@ -11,11 +11,12 @@
 		380E5D9828563C7400354659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9728563C7400354659 /* ContentView.swift */; };
 		380E5D9A28563C7400354659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D9928563C7400354659 /* Assets.xcassets */; };
 		380E5D9D28563C7400354659 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D9C28563C7400354659 /* Preview Assets.xcassets */; };
-		380E5D9F28563C7400354659 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9E28563C7400354659 /* Persistence.swift */; };
+		380E5D9F28563C7400354659 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9E28563C7400354659 /* CoreDataManager.swift */; };
 		380E5DA228563C7400354659 /* RememberMyNumber.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DA028563C7400354659 /* RememberMyNumber.xcdatamodeld */; };
 		380E5DAC28563C7400354659 /* RememberMyNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DAB28563C7400354659 /* RememberMyNumberTests.swift */; };
 		380E5DB628563C7400354659 /* RememberMyNumberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DB528563C7400354659 /* RememberMyNumberUITests.swift */; };
 		380E5DB828563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DB728563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift */; };
+		380E5DC52856E14800354659 /* PhoneContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DC42856E14800354659 /* PhoneContactDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,13 +42,14 @@
 		380E5D9728563C7400354659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		380E5D9928563C7400354659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380E5D9C28563C7400354659 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		380E5D9E28563C7400354659 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		380E5D9E28563C7400354659 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		380E5DA128563C7400354659 /* RememberMyNumber.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RememberMyNumber.xcdatamodel; sourceTree = "<group>"; };
 		380E5DA728563C7400354659 /* RememberMyNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RememberMyNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		380E5DAB28563C7400354659 /* RememberMyNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberTests.swift; sourceTree = "<group>"; };
 		380E5DB128563C7400354659 /* RememberMyNumberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RememberMyNumberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		380E5DB528563C7400354659 /* RememberMyNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberUITests.swift; sourceTree = "<group>"; };
 		380E5DB728563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		380E5DC42856E14800354659 /* PhoneContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContactDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +102,9 @@
 			children = (
 				380E5D9528563C7400354659 /* RememberMyNumberApp.swift */,
 				380E5D9728563C7400354659 /* ContentView.swift */,
+				380E5DC42856E14800354659 /* PhoneContactDetail.swift */,
 				380E5D9928563C7400354659 /* Assets.xcassets */,
-				380E5D9E28563C7400354659 /* Persistence.swift */,
+				380E5D9E28563C7400354659 /* CoreDataManager.swift */,
 				380E5DA028563C7400354659 /* RememberMyNumber.xcdatamodeld */,
 				380E5D9B28563C7400354659 /* Preview Content */,
 			);
@@ -263,8 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				380E5D9F28563C7400354659 /* Persistence.swift in Sources */,
+				380E5D9F28563C7400354659 /* CoreDataManager.swift in Sources */,
 				380E5D9828563C7400354659 /* ContentView.swift in Sources */,
+				380E5DC52856E14800354659 /* PhoneContactDetail.swift in Sources */,
 				380E5D9628563C7400354659 /* RememberMyNumberApp.swift in Sources */,
 				380E5DA228563C7400354659 /* RememberMyNumber.xcdatamodeld in Sources */,
 			);

@@ -9,21 +9,70 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
-
+    let coreDM: CoreDataManager
+    @State private var contactName: String = ""
+    @State private var contactNumber: String = ""
+    
+    @State private var contacts: [PhoneContact] = [PhoneContact]()
+    
+    private func populateContacts() {
+        contacts = coreDM.getAllContacts()
+    }
+    
     var body: some View {
         NavigationView {
+            VStack {
+                TextField("Enter name", text: $contactName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                TextField("Enter number", text: $contactNumber)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                Button("Save") {
+                    coreDM.saveContact(name: contactName, number: contactNumber)
+                    populateContacts()
+                }
+                
+                List {
+                    ForEach (contacts, id: \.self) { contact in
+                        NavigationLink(
+                            destination: PhoneContactDetail(contact: contact, coreDM: coreDM),
+                            label: {
+                                Text(contact.name ?? "")
+                            }
+                        )
+                    }.onDelete(perform: { indexSet in
+                        indexSet.forEach { index in
+                            let contact = contacts[index]
+                            coreDM.deleteContact(contact: contact)
+                            populateContacts()
+                        }
+                    }).listStyle(PlainListStyle())
+                }
+                Spacer()
+            }.padding()
+                .onAppear(perform: {
+                    populateContacts()
+                })
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(coreDM: CoreDataManager())
+    }
+}
+
+    /*
+    var body: some ViewOld {
+        VStack {
+        NavigationView {
             List {
-                ForEach(items) { item in
+                ForEach(contacts) { contact in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        Text("Item at \(contact.name!, formatter: itemFormatter)")
                     } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+                        Text(contact.name!, formatter: itemFormatter)
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -86,3 +135,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
+*/
