@@ -17,6 +17,7 @@
 		380E5DB628563C7400354659 /* RememberMyNumberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DB528563C7400354659 /* RememberMyNumberUITests.swift */; };
 		380E5DB828563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DB728563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift */; };
 		380E5DC52856E14800354659 /* PhoneContactDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5DC42856E14800354659 /* PhoneContactDetail.swift */; };
+		38385E3F285BCC710033F3D5 /* AddPhoneContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38385E3E285BCC710033F3D5 /* AddPhoneContact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		380E5DB528563C7400354659 /* RememberMyNumberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberUITests.swift; sourceTree = "<group>"; };
 		380E5DB728563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		380E5DC42856E14800354659 /* PhoneContactDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneContactDetail.swift; sourceTree = "<group>"; };
+		38385E3E285BCC710033F3D5 /* AddPhoneContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneContact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				380E5D9528563C7400354659 /* RememberMyNumberApp.swift */,
+				38385E3E285BCC710033F3D5 /* AddPhoneContact.swift */,
 				380E5D9728563C7400354659 /* ContentView.swift */,
 				380E5DC42856E14800354659 /* PhoneContactDetail.swift */,
 				380E5D9928563C7400354659 /* Assets.xcassets */,
@@ -269,6 +272,7 @@
 				380E5D9F28563C7400354659 /* CoreDataManager.swift in Sources */,
 				380E5D9828563C7400354659 /* ContentView.swift in Sources */,
 				380E5DC52856E14800354659 /* PhoneContactDetail.swift in Sources */,
+				38385E3F285BCC710033F3D5 /* AddPhoneContact.swift in Sources */,
 				380E5D9628563C7400354659 /* RememberMyNumberApp.swift in Sources */,
 				380E5DA228563C7400354659 /* RememberMyNumber.xcdatamodeld in Sources */,
 			);

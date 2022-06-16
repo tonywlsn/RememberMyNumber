@@ -10,8 +10,9 @@ import CoreData
 
 struct ContentView: View {
     let coreDM: CoreDataManager
-    @State private var contactName: String = ""
-    @State private var contactNumber: String = ""
+    @State private var contactName: String = "John Doe"
+    @State private var contactNumber: String = "410-555-5555"
+    @State private var isActive = false
     
     @State private var contacts: [PhoneContact] = [PhoneContact]()
     
@@ -22,16 +23,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+/*
                 TextField("Enter name", text: $contactName)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 TextField("Enter number", text: $contactNumber)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                
                 Button("Save") {
                     coreDM.saveContact(name: contactName, number: contactNumber)
                     populateContacts()
-                }
-                
+ */
                 List {
                     ForEach (contacts, id: \.self) { contact in
                         NavigationLink(
@@ -48,6 +48,14 @@ struct ContentView: View {
                         }
                     }).listStyle(PlainListStyle())
                 }
+            }.navigationBarTitle("RememberMyNumber")
+                .navigationBarItems(
+                      trailing: Button(action: {}, label: {
+                         NavigationLink(destination:
+                                            AddPhoneContact(coreDM: coreDM)) {
+                              Image(systemName: "plus")
+                         }
+                      }))
                 Spacer()
             }.padding()
                 .onAppear(perform: {
@@ -55,84 +63,14 @@ struct ContentView: View {
                 })
         }
     }
-}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(coreDM: CoreDataManager())
-    }
-}
-
-    /*
-    var body: some ViewOld {
-        VStack {
-        NavigationView {
-            List {
-                ForEach(contacts) { contact in
-                    NavigationLink {
-                        Text("Item at \(contact.name!, formatter: itemFormatter)")
-                    } label: {
-                        Text(contact.name!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-            Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+        Group {
+            ContentView(coreDM: CoreDataManager())
+            ContentView(coreDM: CoreDataManager())
+            ContentView(coreDM: CoreDataManager())
         }
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
-*/
