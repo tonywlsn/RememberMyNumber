@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var contactName: String = "John Doe"
     @State private var contactNumber: String = "410-555-5555"
     @State private var isActive = false
-    
+
     @State private var contacts: [PhoneContact] = [PhoneContact]()
     
     private func populateContacts() {
@@ -23,15 +23,6 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-/*
-                TextField("Enter name", text: $contactName)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("Enter number", text: $contactNumber)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                Button("Save") {
-                    coreDM.saveContact(name: contactName, number: contactNumber)
-                    populateContacts()
- */
                 List {
                     ForEach (contacts, id: \.self) { contact in
                         NavigationLink(
@@ -39,7 +30,9 @@ struct ContentView: View {
                             label: {
                                 Text(contact.name ?? "")
                             }
-                        )
+                        ).onDisappear(){
+                            populateContacts()
+                        }
                     }.onDelete(perform: { indexSet in
                         indexSet.forEach { index in
                             let contact = contacts[index]
@@ -48,7 +41,7 @@ struct ContentView: View {
                         }
                     }).listStyle(PlainListStyle())
                 }
-            }.navigationBarTitle("RememberMyNumber")
+            }.navigationBarTitle("RememberMyNumber", displayMode: .inline)
                 .navigationBarItems(
                       trailing: Button(action: {}, label: {
                          NavigationLink(destination:
@@ -59,6 +52,7 @@ struct ContentView: View {
                 Spacer()
             }.padding()
                 .onAppear(perform: {
+                    print("on appear")
                     populateContacts()
                 })
         }

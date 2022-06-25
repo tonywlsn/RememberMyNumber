@@ -55,7 +55,7 @@ class CoreDataManager {
     func saveContact(name: String, number: String) {
         
         let contact = PhoneContact(context: persistentContainer.viewContext)
-    
+
         contact.name = name
         contact.number = number
         

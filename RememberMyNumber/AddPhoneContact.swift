@@ -19,9 +19,11 @@ struct AddPhoneContact: View {
             Button("Save") {
                 if !contactName.isEmpty {
                     coreDM.saveContact(name: contactName, number: contactNumber)
+                    coreDM.updateContact()
                 }
             }
-        }.padding()    }
+        }.padding()
+    }
 }
 
 struct AddPhoneContact_Previews: PreviewProvider {

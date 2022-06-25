@@ -15,6 +15,8 @@ struct PhoneContactDetail: View {
     
     var body: some View {
         VStack {
+            Label(contact.name ?? "", systemImage: "bolt.fill")
+                .labelStyle(.titleOnly)
             TextField(contact.name ?? "", text: $contactName).textFieldStyle(PlainTextFieldStyle())
             Button("Call") {
                 if !contactName.isEmpty {
