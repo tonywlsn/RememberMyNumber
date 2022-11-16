@@ -7,6 +7,7 @@ rectangle RMN {
   usecase "View contacts" as UC1
   usecase "Add number" as UC2
   usecase "Delete number" as UC3
+  usecase "Make a call" as UC3
 }
 fc --> UC1
 fc --> UC2
