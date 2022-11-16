@@ -18,5 +18,3 @@ fc --> UC3
 version
 @enduml
 
-test2
-ddte
