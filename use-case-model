@@ -1,1 +1,12 @@
-@startuml left to right direction actor "User" as user rectangle Mobile App { usecase "View contacts" as UC1 usecase "Add number" as UC2 usecase "Make a call" as UC3 } user --> UC1 user --> UC2 user --> UC3 @enduml
+@startuml
+left to right direction
+actor "User" as user
+rectangle Mobile App {
+  usecase "View contacts" as UC1
+  usecase "Add number" as UC2
+  usecase "Make a call" as UC3
+}
+user --> UC1
+user --> UC2
+user --> UC3
+@enduml
