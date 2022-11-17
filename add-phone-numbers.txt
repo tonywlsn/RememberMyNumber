@@ -1,6 +1,6 @@
 @startuml
 actor       Actor       as user
-boundary  Boundary    as mainscreen
+MainScreen  Boundary    as mainscreen
 control     Control     as cntrl
 entity      Entity      as entty
 database    Database    as dtbs
