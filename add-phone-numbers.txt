@@ -8,7 +8,7 @@ database    Database    as Foo5
 collections Collections as Foo6
 queue       Queue       as Foo7
 user -> mainscreen : add phone number
-mainscreen -> addnumberviewmodel
+mainscreen -> addnumberviewmodel : enter number
 Foo -> Foo2 : To boundary
 Foo -> Foo3 : To control
 Foo -> Foo4 : To entity
