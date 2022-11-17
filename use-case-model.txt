@@ -2,14 +2,14 @@
 title Use Case Model
 
 left to right direction
-actor "Mobile user" as fc
-rectangle RMN { 
-  usecase "View contacts" as view
-  usecase "Make a call" as call
-  usecase "Add number" as add
-  usecase "Update number" as update
-  usecase "Delete number" as delete
-}
+actor "RMN user" as fc
+
+usecase "View contacts" as view
+usecase "Make a call" as call
+usecase "Add number" as add
+usecase "Update number" as update
+usecase "Delete number" as delete
+
 fc --> view
 fc --> call
 fc --> add 
