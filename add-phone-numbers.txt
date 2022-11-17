@@ -1,16 +1,17 @@
 @startuml
-actor               Actor       as user
-MainScreen1          Boundary    as mainscreen_v
-AddNumberView       Boundary    as addnumber_v
-AddNumberViewModel  Control     as addnumber_vm
-entity      Entity      as entty
-database    Database    as dtbs
-contacts    Collections as contact_m
+actor Actor       as user
+boundary    MainScreen    as mainscreen_v
+boundary    AddNumberView as addnumber_v
+control     AddNumberViewModel as addnumber_vm
+collections ContactModel  as contact_m
+database    Contacts    as contacts
 
 user -> mainscreen_v : add phone number
 mainscreen_v -> addnumber_v : create view
-user -> addnumber_v : enter contact details
+user -> addnumber_v : enter contact details (name, number, hints)
 addnumber_v -> addnumber_vm : add contact details
 addnumber_vm -> contact_m : create new contact
+addnumber_vm --> addnumber_v : notify observers
+contact_m -> contacts : store
 
 @enduml
