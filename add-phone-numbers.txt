@@ -1,6 +1,6 @@
 @startuml
 actor               Actor       as user
-MainScreen          Boundary    as mainscreen_v
+MainScreen1          Boundary    as mainscreen_v
 AddNumberView       Boundary    as addnumber_v
 AddNumberViewModel  Control     as addnumber_vm
 entity      Entity      as entty
