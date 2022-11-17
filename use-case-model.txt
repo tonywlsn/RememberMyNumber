@@ -1,4 +1,6 @@
 @startuml
+title Use Case Model
+
 left to right direction
 actor "Mobile user" as fc
 rectangle RMN { 
