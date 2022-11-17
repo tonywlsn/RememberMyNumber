@@ -1,10 +1,10 @@
 @startuml
-actor Actor       as user
-boundary    MainScreen    as mainscreen_v
-boundary    AddNumberView as addnumber_v
-control     AddNumberViewModel as addnumber_vm
-collections ContactModel  as contact_m
-database    Contacts    as contacts
+actor       Actor               as user
+boundary    MainScreen          as mainscreen_v
+boundary    AddNumberView       as addnumber_v
+control     AddNumberViewModel  as addnumber_vm
+collections ContactModel        as contact_m
+database    Contacts            as contacts
 
 user -> mainscreen_v : add phone number
 mainscreen_v -> addnumber_v : create view
