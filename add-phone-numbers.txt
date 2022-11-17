@@ -1,13 +1,14 @@
 @startuml
-actor       Actor       as user
-MainScreen  Boundary    as mainscreen
-control     Control     as cntrl
+actor               Actor       as user
+MainScreen          Boundary    as mainscreen_v
+AddNumberView       Boundary    as addnumber_v
+AddNumberViewModel  Control     as addnumber_vm
 entity      Entity      as entty
 database    Database    as dtbs
 contacts    Collections as contact_m
 
-user -> mainscreen : add phone number
-mainscreen -> addnumber_v : create view
+user -> mainscreen_v : add phone number
+mainscreen_v -> addnumber_v : create view
 user -> addnumber_v : enter contact details
 addnumber_v -> addnumber_vm : add contact details
 addnumber_vm -> contact_m : create new contact
