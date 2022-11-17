@@ -10,6 +10,6 @@ user -> mainscreen : add phone number
 mainscreen -> addnumber_v : create view
 user -> addnumber_v : enter contact details
 addnumber_v -> addnumber_vm : add contact details
-addnumber_vm -> contact_m : "create contact (name, number)"
+addnumber_vm -> contact_m : create new contact
 
 @enduml
