@@ -1,5 +1,4 @@
 @startuml
-participant Participant as Foo
 actor       Actor       as Foo1
 boundary    Boundary    as Foo2
 control     Control     as Foo3
