@@ -1,28 +1,19 @@
-This file is used by the TestProxy unit test. It contains 2 diagrams description.
-
 @startuml
 left to right direction
 actor "Mobile user" as fc
-actor "Home user" as hfc
 rectangle RMN { 
-  usecase "View contacts" as UC1
-  usecase "Add number" as UC2
-  usecase "Delete number" as UC3
-  usecase "Make a call" as UC4
-  usecase "Update number" as UC5
+  usecase "View contacts" as view
+  usecase "Make a call" as call
+  usecase "Add number" as add
+  usecase "Update number" as update
+  usecase "Delete number" as delete
 }
-fc --> UC1
-fc --> UC2
-fc --> UC3 
-fc --> UC4 
-fc --> UC5
-hfc --> UC3 
-hfc --> UC4 
+fc --> view
+fc --> call
+fc --> add 
+fc --> update 
+fc --> delete
 
-@enduml
-
-@startuml
-version
 @enduml
 
 
