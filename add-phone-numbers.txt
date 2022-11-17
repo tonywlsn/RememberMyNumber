@@ -8,8 +8,8 @@ collections Collections as clctn
 
 user -> mainscreen : add phone number
 mainscreen -> addnumber_v : create view
-user -> addnumber_v
-addnumber_v -> addnumber_vm : add number
+user -> addnumber_v : enter contact details
+addnumber_v -> addnumber_vm : add contact details
 addnumber_vm -> contact_m
 
 @enduml
