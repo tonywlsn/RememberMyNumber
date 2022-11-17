@@ -4,12 +4,12 @@ MainScreen  Boundary    as mainscreen
 control     Control     as cntrl
 entity      Entity      as entty
 database    Database    as dtbs
-contacts Collections    as contact_m
+contacts    Collections as contact_m
 
 user -> mainscreen : add phone number
 mainscreen -> addnumber_v : create view
 user -> addnumber_v : enter contact details
 addnumber_v -> addnumber_vm : add contact details
-addnumber_vm -> contact_m : create contact (name, number)
+addnumber_vm -> contact_m : "create contact (name, number)"
 
 @enduml
