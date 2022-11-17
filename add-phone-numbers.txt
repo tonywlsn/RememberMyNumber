@@ -1,4 +1,6 @@
 @startuml
+title Add phone number
+
 actor       Actor               as user
 boundary    MainScreen          as mainscreen_v
 boundary    AddNumberView       as addnumber_v
