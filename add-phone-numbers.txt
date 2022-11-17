@@ -15,4 +15,4 @@ addnumber_vm --> addnumber_v : notify observers
 contact_m -> contacts : store
 @enduml
 
-[Validate PlantUML](https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000)
+Validate PlantUML ( https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000 )
