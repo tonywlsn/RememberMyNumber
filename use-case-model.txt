@@ -14,6 +14,7 @@ fc --> UC1
 fc --> UC2
 fc --> UC3 
 fc --> UC4 
+hfc --> UC3 
 hfc --> UC4 
 
 @enduml
