@@ -3,16 +3,16 @@ title Add phone number
 
 actor       Actor               as user
 boundary    MainScreen          as mainscreen_v
-boundary    AddNumberView       as addnumber_v
-control     AddNumberViewModel  as addnumber_vm
+boundary    AddContactView       as addcontact_v
+control     AddContactViewModel  as addcontact_vm
 collections ContactModel        as contact_m
 database    Contacts            as contacts
 
 user -> mainscreen_v : add phone number
-mainscreen_v -> addnumber_v : create view
-user -> addnumber_v : enter contact details (name, number, hints)
-addnumber_v -> addnumber_vm : add contact details
-addnumber_vm -> contact_m : create new contact
-addnumber_vm --> addnumber_v : notify observers
+mainscreen_v -> addcontact_v : create view
+user -> addcontact_v : enter contact details (name, number, hints)
+addcontact_v -> addcontact_vm : add contact details
+addcontact_vm -> contact_m : create new contact
+addcontact_vm --> addcontact_v : notify observers
 contact_m -> contacts : store
 @enduml
