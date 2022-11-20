@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct RememberMyNumberScreen: View {
     let coreDM: CoreDataManager
     @State private var contactName: String = "John Doe"
     @State private var contactNumber: String = "410-555-5555"
@@ -62,9 +62,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            ContentView(coreDM: CoreDataManager())
-            ContentView(coreDM: CoreDataManager())
-            ContentView(coreDM: CoreDataManager())
         }
     }
 }

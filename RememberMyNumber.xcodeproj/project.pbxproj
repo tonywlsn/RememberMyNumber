@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		380E5D9628563C7400354659 /* RememberMyNumberApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9528563C7400354659 /* RememberMyNumberApp.swift */; };
-		380E5D9828563C7400354659 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9728563C7400354659 /* ContentView.swift */; };
+		380E5D9828563C7400354659 /* RememberMyNumberScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9728563C7400354659 /* RememberMyNumberScreen.swift */; };
 		380E5D9A28563C7400354659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D9928563C7400354659 /* Assets.xcassets */; };
 		380E5D9D28563C7400354659 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 380E5D9C28563C7400354659 /* Preview Assets.xcassets */; };
 		380E5D9F28563C7400354659 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 380E5D9E28563C7400354659 /* CoreDataManager.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		380E5D9228563C7400354659 /* RememberMyNumber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RememberMyNumber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		380E5D9528563C7400354659 /* RememberMyNumberApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberApp.swift; sourceTree = "<group>"; };
-		380E5D9728563C7400354659 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		380E5D9728563C7400354659 /* RememberMyNumberScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberMyNumberScreen.swift; sourceTree = "<group>"; };
 		380E5D9928563C7400354659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		380E5D9C28563C7400354659 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		380E5D9E28563C7400354659 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -102,9 +102,11 @@
 		380E5D9428563C7400354659 /* RememberMyNumber */ = {
 			isa = PBXGroup;
 			children = (
+				3860F6CE2926F73C00A3C181 /* Screens */,
+				3860F6CD2926F72E00A3C181 /* View Models */,
+				3860F6CC2926F70300A3C181 /* Views */,
 				380E5D9528563C7400354659 /* RememberMyNumberApp.swift */,
 				38385E3E285BCC710033F3D5 /* AddPhoneContact.swift */,
-				380E5D9728563C7400354659 /* ContentView.swift */,
 				380E5DC42856E14800354659 /* PhoneContactDetail.swift */,
 				380E5D9928563C7400354659 /* Assets.xcassets */,
 				380E5D9E28563C7400354659 /* CoreDataManager.swift */,
@@ -137,6 +139,28 @@
 				380E5DB728563C7400354659 /* RememberMyNumberUITestsLaunchTests.swift */,
 			);
 			path = RememberMyNumberUITests;
+			sourceTree = "<group>";
+		};
+		3860F6CC2926F70300A3C181 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3860F6CD2926F72E00A3C181 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		3860F6CE2926F73C00A3C181 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				380E5D9728563C7400354659 /* RememberMyNumberScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				380E5D9F28563C7400354659 /* CoreDataManager.swift in Sources */,
-				380E5D9828563C7400354659 /* ContentView.swift in Sources */,
+				380E5D9828563C7400354659 /* RememberMyNumberScreen.swift in Sources */,
 				380E5DC52856E14800354659 /* PhoneContactDetail.swift in Sources */,
 				38385E3F285BCC710033F3D5 /* AddPhoneContact.swift in Sources */,
 				380E5D9628563C7400354659 /* RememberMyNumberApp.swift in Sources */,
